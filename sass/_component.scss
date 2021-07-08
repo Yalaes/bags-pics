@@ -1,0 +1,170 @@
+.cta {
+    display: inline-block;
+    width: auto;
+    color: $clr-bg;
+    text-transform: uppercase;
+    background-color: $clr-theme-dark;
+    padding: 1.5rem 2.5rem;
+    border-radius: .3rem 2rem;
+    transition: all .24s ease;
+    font-family: $font-title;
+
+    &:hover {
+        border-radius: 2rem .3rem;
+        background-color: $clr-theme-light;
+        transform: translateY(-.4rem) scale(1.02);
+    }
+
+    &--bio {
+        margin-top: 4rem;
+    }
+}
+
+.circleBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40vh;
+    height: 40vh;
+    background-image: url(../images/hero-circle-400.png);
+    background-size: contain;
+    z-index: -100;
+
+    @include tablet-l {
+        width: 30vh;
+        height: 30vh;
+        background-image: url(../images/hero-circle-200.png);
+    }
+
+}
+
+.card-about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+
+    &__head {
+        width: 16rem;
+        height: 16rem;
+        background: url(../images/polygon.svg) no-repeat center;
+        background-size: contain;
+
+        display: grid;
+        place-items: center;
+    }
+
+    &__title {
+        padding-top: 2rem;
+    }
+
+    &__text {
+        padding-top: 2rem;
+        margin: 0;
+        max-width: 25ch;
+    }
+}
+
+.process__card {
+    position: relative;
+    padding: 3rem 1rem 0 3rem;
+
+    &-header {
+        justify-content: flex-start;
+        gap: 2.5rem;
+    }
+
+    @include tablet-s {
+        padding: 2rem 0 0 3rem;
+    }
+
+    @include mobil-m {
+        padding: 2rem 1rem 3rem;
+    }
+}
+
+.card-link {
+    font-weight: bold;
+    border: 2px solid tomato;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    padding: .7rem 2rem;
+    color: tomato;
+    text-transform: uppercase;
+    transition: border-color .2s, color .2s;
+
+    &:hover, &:focus {
+        color: coral;
+        border-color: coral;
+    }
+}
+
+.burgerBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 6rem;
+    height: 6rem;
+    padding: 2rem;
+    border-radius: 50%;
+    color: $clr-theme-dark;
+    z-index: 100;
+    border: none;
+    background-color: rgba($clr-theme-dark, 1);
+    background-image: url(../images/burger-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    cursor: pointer;
+    transition: transform .25s ease;
+    display: none;
+
+    &.open {
+        background-image: url(../images/cross-icon.svg);
+    }
+
+    &:hover {
+        transform: scale(.9);
+    }
+
+    
+    @include tablet-s {
+       display: block;
+    }
+}
+
+.nav-burger {
+    position: fixed;
+    background-color: $clr-theme-dark;
+    color: $clr-bg;
+    padding: 6rem;
+    left: 0;
+    right: 0;
+    bottom: -50rem;
+    z-index: 99;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    
+
+    &__list {
+        flex-direction: column;
+        gap:3rem;
+    }
+
+    &.toggle {
+        visibility: visible;
+        transform: translateY(-50rem);
+    }
+}
+
+.top-arrow {
+    font-size: 3rem;
+}
+
+.fade {
+    animation: up 1.5s ease;
+}

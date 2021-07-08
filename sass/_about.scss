@@ -1,0 +1,19 @@
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+    @include sectionMargin;
+
+    @include tablet-l {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    @include mobil-m {
+        grid-template-columns: 1fr;
+    }
+
+}

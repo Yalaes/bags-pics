@@ -1,0 +1,56 @@
+.work {
+    &__grid {
+        padding-top: 9rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    &__card {
+        border-radius: 3rem;
+        overflow: hidden;
+
+        position: relative;
+
+        min-width: 30rem;
+        flex: 0 1 30%;
+        background-color: transparent;
+        cursor: pointer;
+
+        &-img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($clr-theme-dark, .7);
+            margin: 10%;
+            border-radius: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .35s ease;
+
+            &>h4 {
+                color: $clr-bg;
+            }
+        }
+
+        &:hover &-overlay {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(-1.5rem);
+        }
+    }
+}

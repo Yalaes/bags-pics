@@ -1,0 +1,38 @@
+//hero content up
+//hero image left
+//nav down
+@keyframes up {
+    0%, 15% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+   
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+@keyframes down {
+    0%, 25% {
+        opacity: 0;
+        transform: translateY(-5rem);
+    }
+   
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+
+@keyframes left {
+    0%, 45% {
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+   
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    } 
+}

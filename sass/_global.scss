@@ -1,0 +1,34 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include tablet-l {
+        font-size: 55%;
+    }
+
+    @include mobil-m {
+        font-size: 50%;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    // overflow-x: hidden;
+    line-height: 1.65;
+    font-family: $font;
+    font-size: 1.8rem;
+    color: $clr-txt;
+    font-weight: $font-regular;
+    background-color: $clr-bg;
+}
+
+::selection {
+    background-color: $clr-theme-dark;
+    color: $clr-bg;
+}

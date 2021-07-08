@@ -1,0 +1,80 @@
+.contact {
+    padding-bottom: 12rem;
+    
+    &__content {
+        background-color: rgba($clr-theme-light, .2);
+        border-radius: 5rem;
+        height: 45rem;
+        text-align: center;
+
+
+        &-text {
+            padding-top: 8%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+
+            
+        @include tablet-s {
+            padding: 0 2rem;
+        }
+        }
+    }
+
+    &__menu {
+        margin-top: auto;
+    }
+
+    &__mail {
+        margin-top: 2rem;
+        gap: 2rem;
+        &-text {
+            font-size: 2.4rem;
+            @include mobil-m {
+               font-size: 2rem;
+               font-weight: bold;
+            }
+        }
+
+        @include mobil-m {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+}
+
+.nav--footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+    transform: scale(.75);
+    opacity: .6;
+    transition: all .25s;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include tablet-s {
+        display: none;
+    }
+}
+
+.footer__content {
+    font-size: 1.6rem;
+    padding-top: 0;
+    padding-bottom: 4rem;
+    justify-content: space-between;
+
+    & a {
+        color: $clr-theme-light;
+    }
+
+    @include mobil-s {
+        font-size:1.2rem;
+    }
+}

@@ -1,0 +1,44 @@
+@mixin sectionMargin {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;   
+}
+
+
+//media queries
+//1000px is 62.5 rem
+@mixin tablet-l {
+    @media only screen and (max-width:62.5em){
+        @content;
+    }
+}
+
+//800px is 50em
+@mixin tablet-s {
+    @media only screen and (max-width:50em){
+        @content;
+    }
+}
+
+//650px is 40.6em
+@mixin mobil-l {
+    @media only screen and (max-width:40.6em){
+        @content;
+    }
+}
+
+//460px is 28.75em
+@mixin mobil-m {
+    @media only screen and (max-width:28.75em){
+        @content;
+    }
+}
+
+//336px is 21em
+@mixin mobil-s {
+    @media only screen and (max-width:21em) {
+        @content;
+    }
+}

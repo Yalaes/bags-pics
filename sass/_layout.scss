@@ -1,0 +1,53 @@
+.full-bleed {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin-bottom: 9rem;
+
+    //bg decoration
+    &-right::before {
+        content: "";
+        position: absolute;
+        top: 2rem;
+        right: 0;
+        width: 69%;
+        height: 69%;
+        border-radius: 9rem 0 0 9rem;
+        background-color: $clr-soft-3;
+    }
+
+    &-left::before {
+        content: "";
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        width: 69%;
+        height: 95%;
+        border-radius: 0 9rem 9rem 0;
+
+        background-color: $clr-soft-2;
+    }
+  
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content-section {
+    position: relative;
+    padding: 9rem 3%;
+
+    @include tablet-l {
+        padding: 6rem 3%;
+    }
+
+    @include mobil-m {
+        padding: 3rem 3%;
+    }
+}

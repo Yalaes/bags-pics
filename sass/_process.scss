@@ -1,0 +1,20 @@
+.process {
+    padding-bottom: 10rem;
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // justify-items: center;
+        justify-content: center;
+        gap: 4rem;
+        @include sectionMargin;
+        margin-top: 4rem;
+
+        @include tablet-s {
+            gap: 2.5rem;
+        }
+
+        @include mobil-l {
+           grid-template-columns: 1fr;
+        }
+    }
+}
